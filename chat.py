@@ -5,6 +5,10 @@ load_dotenv()
 #in python class names are in CamelCase;
 #non-class names (e.g. functions/variables) are in snake_case
 class Chat:
+    '''
+    >>> chat = Chat()
+    >>> chat.send_message('my name is bob', temperature=0.0)
+    '''
     client = Groq()
     def __init__(self):
         self.messages = [        
@@ -24,9 +28,16 @@ class Chat:
                 "content": message
             }
         )
+        #in order to make non-deterministic code deterministic;
+        #n general very hard CS problem;
+        # in this case, has a "temperature" param that controls randomness;
+        # the higher the value, the more randomness;
+        # higher temperature => more creativity
         chat_completion = self.client.chat.completions.create(
             messages = self.messages, 
             model="llama-3.1-8b-instant",
+            temperature = 0.0, 
+            #only one, the same, determanisti now above
         )
         result = chat_completion.choices[0].message.content
         self.messages.append({
