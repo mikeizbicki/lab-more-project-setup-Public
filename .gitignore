@@ -1,1 +1,4 @@
 .env
+sols
+venv
+__pycache__
