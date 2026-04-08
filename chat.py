@@ -73,7 +73,6 @@ def repl(temperature=0.8):
     chat> Goodbye.
     Farewell, me scurvy monkey friend, may the winds o' fortune blow in yer favor!
     <BLANKLINE>
-    "
      '''
     import readline
     chat = Chat()
