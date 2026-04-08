@@ -1,0 +1,21 @@
+name: integration
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install package
+        run: |
+          pip install .
+
+      - name: Run integration test
+        run: |
+          chat <<'EOF'
+          I am bob.
+          What is my name?
+          EOF
