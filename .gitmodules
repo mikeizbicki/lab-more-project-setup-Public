@@ -1,0 +1,9 @@
+[submodule "test_projects/Ebay_webscrapping"]
+	path = test_projects/Ebay_webscrapping
+	url = https://github.com/abedoya-norena/Ebay_webscrapping.git
+[submodule "test_projects/abedoya-norena.github.io"]
+	path = test_projects/abedoya-norena.github.io
+	url = https://github.com/abedoya-norena/abedoya-norena.github.io.git
+[submodule "test_projects/Markdown-to-HTML-compiler"]
+	path = test_projects/Markdown-to-HTML-compiler
+	url = https://github.com/abedoya-norena/Markdown-to-HTML-compiler.git
