@@ -46,10 +46,9 @@ class Chat:
         """Initialize the chat with a default system prompt and empty message history."""
         self.provider = provider
         if provider == "groq":
-            self.client = Groq()
+            self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
         else:
             from openai import OpenAI
-            import os
             self.client = OpenAI(
                 base_url="https://openrouter.ai/api/v1",
                 api_key=os.getenv("OPENROUTER_API_KEY"),
